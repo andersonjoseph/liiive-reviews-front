@@ -6,21 +6,32 @@
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.26.1",
     "react": "^17.0.2",
+    "react-alert": "^7.0.3",
     "react-dom": "^17.0.2",
+    "react-hook-form": "^7.28.1",
+    "react-infinite-scroll-hook": "^4.0.3",
+    "react-modal": "^3.14.4",
     "react-scripts": "5.0.0",
-    "web-vitals": "^2.1.4"
+    "suspend-react": "^0.0.8",
+    "use-asset": "^1.0.4",
+    "web-vitals": "^2.1.4",
+    "wouter": "^2.8.0-alpha.2",
+    "zustand": "^3.7.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "prettier --write ./**/**"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "prettier"
     ]
   },
   "browserslist": {
@@ -34,5 +45,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.4",
+    "eslint-config-prettier": "^8.5.0",
+    "postcss": "^8.4.12",
+    "prettier": "^2.6.1",
+    "tailwindcss": "^3.0.23"
   }
 }
