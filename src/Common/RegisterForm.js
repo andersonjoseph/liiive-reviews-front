@@ -17,7 +17,8 @@ export function RegisterForm(props) {
   async function onSubmit(data) {
     try {
       await signUp(data.name, data.email, data.password);
-      alert.success('Cuenta creada correctamente');
+      alert.success('Cuenta creada correctamente, inicia sesión para continuar');
+      window.location.reload();
       props.requestClose();
     } catch (err) {
       if (err.response.status === 400) {
