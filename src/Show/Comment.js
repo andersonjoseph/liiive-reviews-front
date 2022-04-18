@@ -83,10 +83,10 @@ export default function Comment(props) {
               localStorage.role == 1) && (
               <div>
                 <button className="mr-2" onClick={updateCommentHandler}>
-                  <img alt='edit' className="w-5" src="/images/edit.svg" />
+                  <img alt="edit" className="w-5" src="/images/edit.svg" />
                 </button>
                 <button onClick={deleteCommentHandler}>
-                  <img alt='delete' className="w-5" src="/images/delete.svg" />
+                  <img alt="delete" className="w-5" src="/images/delete.svg" />
                 </button>
               </div>
             )}

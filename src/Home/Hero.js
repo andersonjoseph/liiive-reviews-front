@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { suspend } from 'suspend-react';
 import { getRandomShows } from '../API';
 import { Link } from 'wouter';
@@ -12,11 +11,7 @@ export function HeroSkeleton() {
 export function Hero() {
   const shows = suspend(
     async () => {
-      const randomShows = await getRandomShows();
-      return randomShows.map((show) => {
-        show.image = axios.defaults.baseURL + '/public/' + show.image;
-        return show;
-      });
+      return await getRandomShows();
     },
     ['random', 'shows'],
     { lifespan: 60000 * 60 * 2 }, // 2 hours

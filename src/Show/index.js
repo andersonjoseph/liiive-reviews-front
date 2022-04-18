@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { Suspense } from 'react';
 import { suspend } from 'suspend-react';
 import { getShow } from '../API';
@@ -14,9 +13,7 @@ function ShowSectionSkeleton() {
 
 function ShowSection(props) {
   const show = suspend(async () => {
-    const show = await getShow(props.id);
-    show.image = axios.defaults.baseURL + '/public/' + show.image;
-    return show;
+    return await getShow(props.id);
   }, 'show-' + props.id);
 
   return (

@@ -1,15 +1,12 @@
-import axios from 'axios';
 import { Link } from 'wouter';
 
 export function NewShow(props) {
-  const imageUrl = axios.defaults.baseURL + '/public/' + props.image;
-
   return (
     <Link href={`/show/${props.id}`}>
       <div
         className="cursor-pointer text-center w-full bg-center bg-cover rounded-2xl p-2"
         style={{
-          backgroundImage: `url(${imageUrl}), linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.9)`,
+          backgroundImage: `url(${props.image}), linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.9)`,
           backgroundBlendMode: 'overlay',
         }}
       >

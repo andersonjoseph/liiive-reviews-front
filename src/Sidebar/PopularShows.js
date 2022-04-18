@@ -7,7 +7,10 @@ export function PopularShowsSkeleton() {
   const shows = [...Array(4).keys()];
 
   return shows.map((i) => (
-    <div key={i} className="animate-skeleton bg-slate-300 w-5/12 h-20 mb-5 rounded-lg" />
+    <div
+      key={i}
+      className="animate-skeleton bg-slate-300 w-5/12 h-20 mb-5 rounded-lg"
+    />
   ));
 }
 

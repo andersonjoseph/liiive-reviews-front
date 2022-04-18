@@ -1,15 +1,12 @@
-import axios from 'axios';
 import { Link } from 'wouter';
 
 export default function SidebarShow(props) {
-  const imageUrl = axios.defaults.baseURL + '/public/' + props.image;
-
   return (
     <article className="flex gap-2 mb-2">
       <Link href={`/show/${props.id}`}>
         <img
           className="cursor-pointer w-3/12 rounded-lg"
-          src={imageUrl}
+          src={props.image}
           alt={props.title}
         />
       </Link>

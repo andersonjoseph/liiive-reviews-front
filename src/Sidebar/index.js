@@ -11,7 +11,7 @@ function Sidebar() {
         <PopularShows />
       </Suspense>
 
-      <span className='my-4 block'>
+      <span className="my-4 block">
         <hr />
       </span>
 
